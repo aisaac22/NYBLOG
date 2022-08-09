@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body {
+    background-image: url("https://st2.depositphotos.com/1000352/5690/i/600/depositphotos_56908969-stock-photo-white-wallpaper-texture.jpg");
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 800;
+}
+
+header {
+  background: #765b8f;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+  position: relative;
+}
+
+nav a {
+  color: #222035;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #222035;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #222035;
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  height: 50%;
+}
+
+#most {
+  color: #9999a1;
+  text-align: center;
+}
+
+#other {
+  color: #9999a1;
+  text-align: center;
+}
+
+.sign-up-form
+{
+    width: 300px; 
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    background: #fff;
+    padding: 20px;
+    margin: 8% auto 0;
+    text-align: center;
+}
+
+.sign-up-form h1
+{
+    color: #55d6aa;
+    margin-bottom: 30px;
+}
+
+.input-box
+{
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #999;
+    outline: none;
+}
+button 
+{
+    color: #fff;
+    width: 100%;
+    padding: 10px; 
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.signup-btn
+{
+    background-color: #55d6aa;
+}
+
+.twitter-btn
+{
+    background-color: #21afde;
+}
+a 
+{
+    text-decoration: none;
+}
+hr
+{
+    margin-top: 20px;
+    width: 80%; 
+}
+
+.or
+{
+    background: #fff;
+    width: 35px;
+    margin: -27px auto 10px;
+
+}
+img 
+{
+    width: 70px; 
+    margin-top: -50px;
+} 
+
+.col
+{
+    text-align: center;
+    justify-content: center;
+}
+
+#about
+{
+    display: flex;
+    justify-content: center;    
+}
+
+#hello
+{
+    color: #55d6aa;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.vid
+{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
+#part 
+{
+    display: block;
+    margin-left: 3.5%;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 35px;
+}

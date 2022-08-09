@@ -1,0 +1,112 @@
+{% extends 'base.html'%}
+
+{% block title%}
+
+{% endblock title%}
+
+{% block content%}
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://media.cntraveler.com/photos/5f622dadb364bbb0663273fc/16:9/w_2560,c_limit/RockefellerCenter-NYC-2020-B0D8KH.jpg" class="d-block w-100" alt="..." height="590">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Rockefeller Center</h5>
+        <p>One of the best views in the city?</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.nycgo.com/images/venues/2451/city-hall-park-phil-kline__large.jpg" class="d-block w-100" alt="..." height="590">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>City Hall Park</h5>
+        <p>100 plus years serving downtown New York</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://img.mlbstatic.com/mlb-images/image/private/t_16x9/t_w2208/mlb/tcuphjigdobyalzmii8y.jpg" class="d-block w-100" alt="..." height="590">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Yankee Stadium</h5>
+        <p>Heart of the Bronx</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<p id="most" style="color: rgb(10, 7, 1);">The City that Never Sleeps</p> 
+<p id="other" style="color: rgb(10, 7, 1);">
+
+  The city of New York was made to be seen and we are here to show it to you. One visit shows why it is the center of history, commerce, and entertainment. Despite popular beliefs it is not just about the skyscrapers. The city is all about the parks rich in greenery, serving as sanctums of peace in the pandemonium. It is also home to one of a kind museums that bring organisms and cultures back to life. Furthermore, since its founding in 1624 New York has been the location for major events in United States history. Within the city are 5 boroughs well known for each of the own strengths. Manhattan is the island of amazement with the likes of central park and areas like wall street. It is the borough most think of when picturing New York City, with good reason. Near the top of the island are iconic neighborhoods such as Harlem and Washington Heights, important landmarks in Black and Hispanic history in the city. Further downtown are the bright lights of 42nd street which always leaves viewers in awe. Brooklyn is the next well known borough. As it is to the east of Manhattan, Brooklyn shares a bridge with the island that many enjoy walking across. This borough is one of the most dense places in the United States with its very high residence count. Similar to Manhattan, Brooklyn has a well off downtown area filled with building dedicated to sports, business, and more. The Bronx is another location rich with African-American culture. Simultaneously the borough is filled with many different cultures making it a popular location for authentic foreign food and events. Queens is the 
+
+
+  All this goes to say there are always options in the city. The question is which are the right locations to see? 
+  
+</p>
+
+<p id="part">                   .
+<img src="https://thumbs.gfycat.com/AromaticMindlessBellsnake-size_restricted.gif"
+style="width:1000px;height:600px;" class="center">
+</p>
+
+<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <iframe class="vid" width="560" height="315" src="https://www.youtube.com/embed/FjU_x1106pg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: 'M7lc1UVf-VE',
+          playerVars: {
+            'playsinline': 1
+          },
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
+
+{% endblock content%}
